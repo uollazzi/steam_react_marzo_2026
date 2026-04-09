@@ -10,6 +10,7 @@ import {
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
 import PlatformIcon from "./PlatformIcon"
+import { Link } from "react-router"
 
 interface Props {
   game: Game
@@ -42,7 +43,9 @@ const GamePreview = ({ game }: Props) => {
         </CardDescription>
       </CardHeader>
       <CardFooter>
-        <Button className="w-full">Vai al dettaglio</Button>
+        <Button className="w-full">
+          <Link to={`/giochi/${game.id}`}>Vai al dettaglio</Link>
+        </Button>
       </CardFooter>
     </Card>
   )
